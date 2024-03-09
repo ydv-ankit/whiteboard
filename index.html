@@ -10,13 +10,23 @@
     <canvas id="canvas"></canvas>
     <div class="toolbox">
       <div class="tools">
-        <input type="button" value="red" onclick="changeStrokeColor('red')" />
-        <input
-          type="button"
-          value="black"
-          onclick="changeStrokeColor('black')"
-        />
-        <input type="button" value="blue" onclick="changeStrokeColor('blue')" />
+        <div class="colors">
+          <label for="colotTooltip">Color: </label>
+          <input type="color" name="colors" id="colors" />
+        </div>
+        <div class="strokeSize">
+          <label for="strokeSize">Stroke Size</label>
+          <input
+            type="range"
+            name="strokeSize"
+            id="strokeSize"
+            min="1"
+            max="50"
+          />
+        </div>
+        <div class="eraser">
+          <input type="button" value="eraser" id="eraser" />
+        </div>
       </div>
     </div>
     <script src="js/board.js"></script>
